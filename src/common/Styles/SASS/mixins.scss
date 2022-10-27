@@ -1,0 +1,25 @@
+@mixin flexCenter($justifyContent: center, $flexDirection: row) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+  flex-direction: $flexDirection;
+}
+
+@mixin fontParams($size, $lineHeight, $weight, $marginBottom: 15px) {
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+  margin-bottom: $marginBottom;
+}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @media (max-width: 768px) {
+    max-width: 720px;
+  }
+  @media (max-width: 425px) {
+    max-width: 425px;
+  }
+}

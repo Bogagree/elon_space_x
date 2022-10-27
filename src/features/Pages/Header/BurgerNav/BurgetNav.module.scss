@@ -1,0 +1,38 @@
+//@import "../../common/styles/SASS/variables";
+//@import "../../common/styles/SASS/mixins";
+
+.burgerNav {
+
+  .burgerNavItems {
+
+    .link {
+
+      &:hover {
+
+      }
+
+      .active {
+      }
+    }
+  }
+
+  .burgerBtn {
+    position: absolute;
+    right: 25px;
+    background: $primaryColor;
+    margin-top: 24px;
+    width: 48px;
+  }
+
+  .show {
+    transform: translate(0, 0);
+    transition: ease-in 0.7s;
+    height: 220px;
+  }
+
+
+  @media screen and (min-width: 883px) {
+    display: none;
+  }
+
+}
