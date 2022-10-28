@@ -3,22 +3,34 @@
 
 
 .nav {
-  width: 800px;
-  height: 100px;
-  @include fontParams(16px, 22px,300);
+  min-width: 58%;
+  min-height: 100px;
   @include flexCenter(space-between);
 
   .link {
-    color: $primaryTextColor;
-    font-family: "Museo Sans Cyrl", sans-serif;
+    position: relative;
+    @include fontParams(16px, 22px, 300, $primaryTextColor);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 10px;
+      border-bottom: 1px solid rgba(177, 177, 177, 0.3);
+    }
 
     &:hover {
-
+      cursor: pointer;
+      color: $secondaryTextColor;
+      opacity: 0.9;
+      &:after {
+        width: 100%;
+      }
     }
 
-    .active {
-
-    }
   }
 
   @media screen and (max-width: 768px) {
