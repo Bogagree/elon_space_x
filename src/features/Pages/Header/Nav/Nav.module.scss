@@ -1,7 +1,14 @@
+@import "../../../../common/Styles/SASS/variables";
+@import "../../../../common/Styles/SASS/mixins";
 
 .nav {
+  width: 800px;
+  height: 100px;
+  @include fontParams(16px, 22px,300);
+  @include flexCenter(space-between);
 
   .link {
+    color: $primaryTextColor;
 
     &:hover {
 

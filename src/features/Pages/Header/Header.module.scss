@@ -1,0 +1,41 @@
+@import "../../../common/Styles/SASS/variables";
+@import "../../../common/Styles/SASS/mixins";
+@import "../../../common/Styles/SASS/corners";
+
+.wrapper {
+  width: 100%;
+  position: fixed;
+  border-top: 1px solid rgba(177, 177, 177, 0.3);
+  border-bottom: 1px solid rgba(177, 177, 177, 0.3);
+
+  .header {
+    max-width: 1400px;
+    margin: 0 auto;
+    @include flexCenter(space-between);
+
+    .box {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 316px;
+      height: 100px;
+      position: relative;
+      top: -1px;
+      border-right: 1px solid rgba(177, 177, 177, 0.3);
+      border-left: 1px solid rgba(177, 177, 177, 0.3);
+
+      &.out {
+        @include line-corners-out($secondaryTextColor);
+
+      }
+
+      &:hover {
+        border: 0;
+      }
+    }
+  }
+}
+
+
+

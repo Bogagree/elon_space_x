@@ -1,0 +1,85 @@
+@mixin line-corners($line-color, $line-size: 7, $line-type: out, $line-distance: 20) {
+  position: absolute;
+  width: 101%;
+
+  transition-duration: 0.3s;
+
+  // arrows
+  &:before,
+  &:after {
+    content: '';
+
+    position: absolute;
+
+    width: $line-size + px;
+    height: $line-size + px;
+
+    border-color: $line-color;
+    border-style: solid;
+
+    // will-change: transform, opacity;
+    transition-duration: 0.3s;
+    transform: translateZ(0);
+  }
+
+  // top corners
+  &.top {
+    &:before { border-width: 2px 0 0 2px; }
+    &:after { border-width: 2px 2px 0 0; }
+  }
+
+  // bottom corners
+  &.bottom {
+    &:before { border-width: 0 0 2px 2px; }
+    &:after { border-width: 0 2px 2px 0; }
+  }
+
+  @if $line-type == out {
+    &:before { left: 0; }
+    &:after { right: 0; }
+    &.top { top: 0; }
+    &.bottom { bottom: ($line-size)  + px; }
+  }
+
+  @if $line-type == in {
+    &:before { left: $line-distance + px; }
+    &:after { right: $line-distance + px; }
+    &.top { top: $line-distance + px; }
+    &.bottom { bottom: ($line-distance + $line-size) + px; }
+  }
+}
+
+@mixin line-corners-hover($line-size: 7, $line-type: out, $line-distance: 20) {
+  @if $line-type == out {
+    &:before { left: 0; }
+    &:after { right: 0; }
+    &.top { top: 0; }
+    &.bottom { bottom: $line-size + px; }
+  }
+
+  @if $line-type == in {
+    &:before { left: $line-distance + px; }
+    &:after { right: $line-distance + px; }
+    &.top { top: $line-distance + px; }
+    &.bottom { bottom: ($line-distance + $line-size) + px; }
+  }
+}
+
+// style: borders out (edge)
+@mixin line-corners-out($line-color, $line-size: 7) {
+  .corners { @include line-corners($line-color, $line-size, out); }
+  &:hover {
+    .corners { @include line-corners-hover($line-size, in); }
+  }
+}
+
+// style: borders in
+@mixin line-corners-in($line-color, $line-size: 7) {
+  .corners { @include line-corners($line-color, $line-size, in); }
+  &:hover {
+    .corners { @include line-corners-hover($line-size, out); }
+  }
+}
+//
+// @end: Corners mixin
+//
