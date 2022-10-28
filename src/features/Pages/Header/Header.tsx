@@ -16,17 +16,16 @@ export const Header = () => {
             <header className={style.header}>
 
                 <div className={` ${style.box} ${style.out} `}>
-
                     <div className={style.content}>
                         <img src={logo} alt="logo"/>
                     </div>
-
                     <div className={` ${style.corners} ${style.top} `}></div>
                     <div className={` ${style.corners} ${style.bottom} `}></div>
                 </div>
 
                 <Nav sections={sections}/>
                 <BurgerNav sections={sections}/>
+
             </header>
         </div>
     );

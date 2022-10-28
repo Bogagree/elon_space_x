@@ -1,6 +1,7 @@
 @import "../../../../common/Styles/SASS/variables";
 @import "../../../../common/Styles/SASS/mixins";
 
+
 .nav {
   width: 800px;
   height: 100px;
@@ -9,6 +10,7 @@
 
   .link {
     color: $primaryTextColor;
+    font-family: "Museo Sans Cyrl", sans-serif;
 
     &:hover {
 
