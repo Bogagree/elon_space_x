@@ -5,12 +5,13 @@
   flex-direction: $flexDirection;
 }
 
-@mixin fontParams($size, $lineHeight, $weight, $color) {
-  font-family: "Museo sans cyrl", serif;
+@mixin fontParams($size, $lineHeight, $weight, $color, $font-family: "Museo sans cyrl") {
+  font-family: $font-family;
   font-size: $size;
   line-height: $lineHeight;
   font-weight: $weight;
   color: $color;
+  margin: 0;
 }
 
 @mixin container {

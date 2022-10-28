@@ -6,3 +6,12 @@
   background-position:  center;
   background-repeat: no-repeat;
 }
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

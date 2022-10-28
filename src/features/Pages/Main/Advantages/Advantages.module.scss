@@ -1,0 +1,9 @@
+@import "../../../../common/Styles/SASS/variables";
+@import "../../../../common/Styles/SASS/mixins";
+
+.advantages {
+  width: 380px;
+  height: 380px;
+  @include flexCenter(space-around);
+  flex-wrap: wrap;
+}
