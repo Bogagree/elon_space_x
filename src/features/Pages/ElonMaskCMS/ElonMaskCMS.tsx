@@ -1,33 +1,35 @@
 import React, {ChangeEvent, useState} from 'react';
 import style from './ElonMaskCMS.module.scss'
-import {useDispatch} from 'react-redux';
+import {useAppDispatch, useAppSelector} from '../../../app/store';
+import {CmsDataType, setCmsData} from './cms-reducer';
 
 export const ElonMaskCms = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
+    const data = useAppSelector(state => state.cms)
 
-    const [marketPosition, setMarketPosition] = useState('')
-    const [guaranty, setGuaranty] = useState('')
-    const [year, setYear] = useState('')
-    const [travellingDuration, setTravellingDuration] = useState('')
+    const [marketPosition, setMarketPosition] = useState(data.marketPosition)
+    const [guaranty, setGuaranty] = useState(data.guaranty)
+    const [year, setYear] = useState(data.year)
+    const [travellingDuration, setTravellingDuration] = useState(data.travellingDuration)
 
-    const marketPositionHandler = (e:ChangeEvent<HTMLInputElement>) => {
+    const marketPositionHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setMarketPosition(e.currentTarget.value)
     }
-    const guarantyHandler = (e:ChangeEvent<HTMLInputElement>) => {
+    const guarantyHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setGuaranty(e.currentTarget.value)
     }
-    const yearHandler = (e:ChangeEvent<HTMLInputElement>) => {
+    const yearHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setYear(e.currentTarget.value)
     }
-    const travellingDurationHandler = (e:ChangeEvent<HTMLInputElement>) => {
+    const travellingDurationHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTravellingDuration(e.currentTarget.value)
     }
 
-
     const updateData = () => {
-        // dispatch()
-        console.log(marketPosition, guaranty, year, travellingDuration)
+        const newData: CmsDataType = {marketPosition, guaranty, travellingDuration, year}
+        dispatch(setCmsData(newData))
+        console.log(newData)
     };
 
     return (
@@ -37,7 +39,8 @@ export const ElonMaskCms = () => {
                 <input type="text" placeholder="Мы" value={marketPosition} onChange={marketPositionHandler}/>
                 <input type="text" placeholder="Гарантируем" value={guaranty} onChange={guarantyHandler}/>
                 <input type="text" placeholder="Подарок" value={year} onChange={yearHandler}/>
-                <input type="text" placeholder="Путешествие" value={travellingDuration} onChange={travellingDurationHandler}/>
+                <input type="text" placeholder="Путешествие" value={travellingDuration}
+                       onChange={travellingDurationHandler}/>
 
                 <div style={{color: 'white', margin: '10px'}}>{marketPosition}</div>
                 <div style={{color: 'white', margin: '10px'}}>{guaranty}</div>

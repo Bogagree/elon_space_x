@@ -1,31 +1,32 @@
-const initialState: InitialStateType = {
-    error: null,
-    isInitialized: false
+const cmsInitialState = {
+    marketPosition: '1',
+    guaranty: '50%',
+    year: '2001',
+    travellingDuration: '567'
+
 }
 
-export const cmsReducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
+export const cmsReducer = (state: InitialStateType = cmsInitialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
-        case 'APP/SET-ERROR':
-            return {...state, error: action.error}
-        case 'APP/SET-INITIALIZED':
-            return {...state, isInitialized: action.value}
+        case 'CMS/SET-DATA':
+            console.log('payload', action.payload)
+            return {...state, ...action.payload}
         default:
             return {...state}
     }
 }
 
-export type InitialStateType = {
-    error: string | null
-    isInitialized: boolean
+type InitialStateType = typeof cmsInitialState
+
+export const setCmsData = (data: CmsDataType) => ({type: 'CMS/SET-DATA', payload: data} as const)
+
+export type SetCmsDataType = ReturnType<typeof setCmsData>
+
+type ActionsType = SetCmsDataType
+
+export type CmsDataType = {
+    marketPosition: string
+    guaranty: string
+    year: string
+    travellingDuration: string
 }
-
-export const setAppErrorAC = (error: string | null) => ({type: 'APP/SET-ERROR', error} as const)
-export const setAppInitializedAC = (value: boolean) => ({type: 'APP/SET-INITIALIZED', value} as const)
-
-
-export type SetAppErrorActionType = ReturnType<typeof setAppErrorAC>
-export type SetAppInitializedActionType = ReturnType<typeof setAppInitializedAC>
-
-
-type ActionsType = SetAppErrorActionType
-    | SetAppInitializedActionType
