@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Museo Sans Cyrl';
-  src: local('Museo Sans Cyrl'), url(./fonts/Museo/Museo100.otf) format('truetype');
+  src: local('Museo Sans Cyrl'), url(./fonts/Museo/museosanscyrl_100.otf) format('truetype');
 }
 
 body {
