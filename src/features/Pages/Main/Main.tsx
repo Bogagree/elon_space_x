@@ -19,6 +19,7 @@ export const Main = () => {
                 </div>
 
                 <Advantages/>
+
             </div>
 
         </section>

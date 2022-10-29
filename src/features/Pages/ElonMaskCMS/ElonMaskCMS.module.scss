@@ -1,4 +1,14 @@
+@import "../../../common/Styles/SASS/mixins";
+
 .cms {
   margin: 0 auto;
   width: 1920px;
+  padding-top: 20px;
+  height: 50vh;
+  background: black;
+  .container {
+    @include container();
+
+  }
+
 }
