@@ -13,7 +13,8 @@ export const Main = () => {
                     <h1><span>Путешествие</span><br/>
                         <span className={style.subtitle}>на красную планету</span>
                     </h1>
-                    <SiteButton>Начать путешествие</SiteButton>
+
+                    <SiteButton children={'Начать путешествие'}/>
                 </div>
 
                 <Advantages/>
