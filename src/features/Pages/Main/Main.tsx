@@ -10,8 +10,8 @@ export const Main = () => {
             <div className={style.container}>
 
                 <div className={style.textBlock}>
-                    <h1>Путешествие<br/>
-                        <span>на красную планету</span>
+                    <h1><span>Путешествие</span><br/>
+                        <span className={style.subtitle}>на красную планету</span>
                     </h1>
                     <SiteButton>Начать путешествие</SiteButton>
                 </div>

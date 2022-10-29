@@ -22,15 +22,17 @@
         @include fontParams(58px, 1, 700, $primaryTextColor);
         @include textGradient();
         text-transform: uppercase;
-        margin-bottom: 42px;
-        h1:first-child{
-          margin-bottom: 0;
-        }
-      }
+        margin-bottom: 95px;
+        position: relative;
 
-      h1 span {
-        @include fontParams(25px, 1.2, 300, $primaryTextColor);
-        @include textGradient();
+        .subtitle {
+          padding-top: 0;
+          @include fontParams(25px, 1, 300, $primaryTextColor);
+          @include textGradient();
+          position: absolute;
+          text-transform: none;
+          top: 58px;
+        }
 
       }
     }
