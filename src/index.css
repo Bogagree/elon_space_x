@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-weight: 100;
-  src: local('Museo Sans Cyrl'), url(./fonts/Museo/museosanscyrl_100.otf) format('truetype');
+  src: local('Museo Sans Cyrl'), url(assets/fonts/Museo/museosanscyrl_100.otf) format('truetype');
 }
 
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-weight: 300;
-  src: local('Museo Sans Cyrl'), url(./fonts/Museo/museosanscyrl_300.ttf) format('truetype');
+  src: local('Museo Sans Cyrl'), url(assets/fonts/Museo/museosanscyrl_300.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Museo Sans Cyrl';
   font-weight: 700;
-  src: local('Museo Sans Cyrl'), url(./fonts/Museo/museosanscyrl_700.ttf) format('truetype');
+  src: local('Museo Sans Cyrl'), url(assets/fonts/Museo/museosanscyrl_700.ttf) format('truetype');
 }
 
 body {
