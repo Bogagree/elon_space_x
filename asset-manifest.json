@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/elon_spaceX%20/static/css/main.f1e0fe82.css",
-    "main.js": "/elon_spaceX%20/static/js/main.e9cd703c.js",
-    "static/js/787.b28371a8.chunk.js": "/elon_spaceX%20/static/js/787.b28371a8.chunk.js",
-    "static/media/fon_10.png": "/elon_spaceX%20/static/media/fon_10.ddb101755051990ab611.png",
-    "static/media/museosanscyrl_100.otf": "/elon_spaceX%20/static/media/museosanscyrl_100.ca2ff6f4372939e9c7bc.otf",
-    "static/media/museosanscyrl_300.ttf": "/elon_spaceX%20/static/media/museosanscyrl_300.b89d2aed072b957f2e03.ttf",
-    "static/media/museosanscyrl_700.ttf": "/elon_spaceX%20/static/media/museosanscyrl_700.4e63f06b4aa58983885e.ttf",
-    "index.html": "/elon_spaceX%20/index.html",
-    "main.f1e0fe82.css.map": "/elon_spaceX%20/static/css/main.f1e0fe82.css.map",
-    "main.e9cd703c.js.map": "/elon_spaceX%20/static/js/main.e9cd703c.js.map",
-    "787.b28371a8.chunk.js.map": "/elon_spaceX%20/static/js/787.b28371a8.chunk.js.map"
+    "main.css": "/elon_space_x/static/css/main.30cf6c92.css",
+    "main.js": "/elon_space_x/static/js/main.2c1b1eb3.js",
+    "static/js/787.b28371a8.chunk.js": "/elon_space_x/static/js/787.b28371a8.chunk.js",
+    "static/media/fon_10.png": "/elon_space_x/static/media/fon_10.ddb101755051990ab611.png",
+    "static/media/museosanscyrl_100.otf": "/elon_space_x/static/media/museosanscyrl_100.ca2ff6f4372939e9c7bc.otf",
+    "static/media/museosanscyrl_300.ttf": "/elon_space_x/static/media/museosanscyrl_300.b89d2aed072b957f2e03.ttf",
+    "static/media/museosanscyrl_700.ttf": "/elon_space_x/static/media/museosanscyrl_700.4e63f06b4aa58983885e.ttf",
+    "index.html": "/elon_space_x/index.html",
+    "main.30cf6c92.css.map": "/elon_space_x/static/css/main.30cf6c92.css.map",
+    "main.2c1b1eb3.js.map": "/elon_space_x/static/js/main.2c1b1eb3.js.map",
+    "787.b28371a8.chunk.js.map": "/elon_space_x/static/js/787.b28371a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1e0fe82.css",
-    "static/js/main.e9cd703c.js"
+    "static/css/main.30cf6c92.css",
+    "static/js/main.2c1b1eb3.js"
   ]
 }
