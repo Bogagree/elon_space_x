@@ -9,9 +9,12 @@ export const Main = () => {
 
             <div className={style.container}>
 
-                <div ><h1 style={{color: 'white'}}>Путешествие на красную планету</h1>
-
-                    <SiteButton>Начать путешествие</SiteButton></div>
+                <div className={style.textBlock}>
+                    <h1>Путешествие<br/>
+                        <span>на красную планету</span>
+                    </h1>
+                    <SiteButton>Начать путешествие</SiteButton>
+                </div>
 
                 <Advantages/>
 

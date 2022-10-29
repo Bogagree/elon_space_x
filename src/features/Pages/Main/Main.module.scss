@@ -1,17 +1,38 @@
+@import "../../../common/Styles/SASS/mixins";
+@import "../../../common/Styles/SASS/variables";
+
 .main {
   min-width: 1920px;
   min-height: 660px;
   background-image: url("../../../assets/img/fon_10.png");
   background-size: cover;
-  background-position:  center;
+  background-position: center;
   background-repeat: no-repeat;
-}
 
-.container {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding-top: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  .container {
+    @include container();
+    @include flexCenter(space-between);
+    padding-top: 130px;
+
+    .textBlock {
+      margin-left: 15px;
+
+      h1 {
+        @include fontParams(58px, 1, 700, $primaryTextColor);
+        @include textGradient();
+        text-transform: uppercase;
+        margin-bottom: 42px;
+        h1:first-child{
+          margin-bottom: 0;
+        }
+      }
+
+      h1 span {
+        @include fontParams(25px, 1.2, 300, $primaryTextColor);
+        @include textGradient();
+
+      }
+    }
+  }
 }
