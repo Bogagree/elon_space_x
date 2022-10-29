@@ -13,16 +13,16 @@
   .container {
     @include container();
     @include flexCenter(space-between);
-    padding-top: 130px;
-
+    padding-top: 135px;
+    padding-left: 25px;
     .textBlock {
-      margin-left: 15px;
+
 
       h1 {
         @include fontParams(58px, 1, 700, $primaryTextColor);
         @include textGradient();
         text-transform: uppercase;
-        margin-bottom: 95px;
+        margin-bottom: 105px;
         position: relative;
 
         .subtitle {

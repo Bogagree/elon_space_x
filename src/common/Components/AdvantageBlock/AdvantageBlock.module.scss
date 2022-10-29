@@ -2,10 +2,12 @@
 @import "../../Styles/SASS/mixins";
 
 .advantageBlock {
-  width: 172px;
-  height: 172px;
+  width: 185px;
+  height: 185px;
+  padding: 5px;
   position: relative;
   background: transparent;
+  box-sizing: border-box;
   @include flexCenter($flexDirection: column);
 
   &::after {
@@ -13,11 +15,11 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba(177, 177, 177, 0.08);
+    background: linear-gradient( 45deg, transparentize(rgba(0, 1, 1, 0.85), 1 ), transparentize(#ffffff, 0.95 ), transparentize(#b1b1b1, 1 )) ;
   }
 
   .upText {
-    @include fontParams(16px, 3, 100, $secondaryTextColor);
+    @include fontParams(16px, 2.2, 100, $secondaryTextColor);
     opacity: 0.65;
   }
 
@@ -27,12 +29,12 @@
     opacity: 1;
 
     .middleTextYear {
-      @include fontParams(18px, 1.55, 700, $primaryTextColor, "Arial");
+      @include fontParams(18px, 2.3, 700, $primaryTextColor, "Museo sans cyrl");
     }
   }
 
   .middleText {
-    @include fontParams(60px, 1, 700, $primaryTextColor, "Museo sans cyrl");
+    @include fontParams(60px, 1.17, 700, $primaryTextColor, "Museo sans cyrl");
   }
 
 
