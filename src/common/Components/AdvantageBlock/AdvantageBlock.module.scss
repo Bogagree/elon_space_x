@@ -27,7 +27,7 @@
     opacity: 1;
 
     .middleTextYear {
-      @include fontParams(18px, 1.5, 700, $primaryTextColor, "Arial");
+      @include fontParams(18px, 1.55, 700, $primaryTextColor, "Arial");
     }
   }
 

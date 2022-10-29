@@ -3,7 +3,6 @@
 
 .nav {
   min-width: 58%;
-  min-height: 100px;
   @include flexCenter(space-between);
 
   .link {

@@ -37,8 +37,8 @@
   @if $line-type == out {
     &:before { left: 0; }
     &:after { right: 0; }
-    &.top { top: 0; }
-    &.bottom { bottom: ($line-size)  + px; }
+    &.top { top: -2px; }
+    &.bottom { bottom: ($line-size +3)  + px; }
   }
 
   @if $line-type == in {
