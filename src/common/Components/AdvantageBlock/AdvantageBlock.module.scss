@@ -29,7 +29,7 @@
     opacity: 1;
 
     .middleTextYear {
-      @include fontParams(18px, 1.17, 700, $primaryTextColor, "Museo sans cyrl");
+      @include fontParams(18px, 2.25, 700, $primaryTextColor, "Museo sans cyrl");
     }
   }
 
