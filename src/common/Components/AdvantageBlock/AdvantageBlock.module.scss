@@ -19,7 +19,7 @@
   }
 
   .upText {
-    @include fontParams(16px, 2.2, 100, $secondaryTextColor);
+    @include fontParams(16px, 2, 100, $secondaryTextColor);
     opacity: 0.65;
   }
 
@@ -29,7 +29,7 @@
     opacity: 1;
 
     .middleTextYear {
-      @include fontParams(18px, 2.3, 700, $primaryTextColor, "Museo sans cyrl");
+      @include fontParams(18px, 1.17, 700, $primaryTextColor, "Museo sans cyrl");
     }
   }
 
