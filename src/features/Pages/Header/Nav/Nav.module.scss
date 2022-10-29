@@ -2,12 +2,14 @@
 @import "../../../../common/Styles/SASS/mixins";
 
 .nav {
-  min-width: 58%;
+ width: 58%;
   @include flexCenter(space-between);
 
   .link {
     position: relative;
     @include fontParams(16px, 22px, 300, $primaryTextColor);
+    margin-right: 9px;
+
 
     &::after {
       content: '';
@@ -27,6 +29,13 @@
       &:after {
         width: 100%;
       }
+    }
+
+    &:nth-child(5){
+      margin-right: 2px;
+    }
+    &:nth-child(6){
+      margin-right: 14px;
     }
 
   }
