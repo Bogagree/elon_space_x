@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/bogagree.github.io/elon_spaceX%20/static/css/main.49c82a6b.css",
+    "main.js": "/bogagree.github.io/elon_spaceX%20/static/js/main.385466a8.js",
+    "static/js/787.b28371a8.chunk.js": "/bogagree.github.io/elon_spaceX%20/static/js/787.b28371a8.chunk.js",
+    "static/media/fon_10.png": "/bogagree.github.io/elon_spaceX%20/static/media/fon_10.ddb101755051990ab611.png",
+    "static/media/museosanscyrl_100.otf": "/bogagree.github.io/elon_spaceX%20/static/media/museosanscyrl_100.ca2ff6f4372939e9c7bc.otf",
+    "static/media/museosanscyrl_300.ttf": "/bogagree.github.io/elon_spaceX%20/static/media/museosanscyrl_300.b89d2aed072b957f2e03.ttf",
+    "static/media/museosanscyrl_700.ttf": "/bogagree.github.io/elon_spaceX%20/static/media/museosanscyrl_700.4e63f06b4aa58983885e.ttf",
+    "index.html": "/bogagree.github.io/elon_spaceX%20/index.html",
+    "main.49c82a6b.css.map": "/bogagree.github.io/elon_spaceX%20/static/css/main.49c82a6b.css.map",
+    "main.385466a8.js.map": "/bogagree.github.io/elon_spaceX%20/static/js/main.385466a8.js.map",
+    "787.b28371a8.chunk.js.map": "/bogagree.github.io/elon_spaceX%20/static/js/787.b28371a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49c82a6b.css",
+    "static/js/main.385466a8.js"
+  ]
+}
