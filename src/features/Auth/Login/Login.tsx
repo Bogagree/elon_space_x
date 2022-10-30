@@ -51,7 +51,6 @@ export const Login = () => {
     });
 
     return (
-        // <div className={styles.wrapper}>
             <Grid container justifyContent={'center'}>
                 <Grid item justifyContent={'center'}>
                     <form onSubmit={formik.handleSubmit}>
@@ -97,6 +96,5 @@ export const Login = () => {
                     </form>
                 </Grid>
             </Grid>
-        // </div>
     )
 }

@@ -1,25 +1,38 @@
 @import "../../../../common/Styles/SASS/variables";
+@import "../../../../common/Styles/SASS/mixins";
+@import "../../../../common/Styles/SASS/devices";
 
 .burgerNav {
+  display: none;
+  height: 100%;
+  width: 100%;
 
   .burgerNavItems {
-
+    @include flexCenter(space-around, column);
+    z-index: 99;
+    position: absolute;
+    background-color: $primaryColor;
+    color: $primaryTextColor;
+    padding: 24px;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0;
+    transform: translate(0, -220px);
+    transition: ease-in 0.7s;
     .link {
-
       &:hover {
-
       }
-
       .active {
       }
     }
   }
 
   .burgerBtn {
+    z-index: 100;
     position: absolute;
     right: 25px;
-    background: $primaryColor;
-    margin-top: 24px;
+    top: 25px;
     width: 48px;
   }
 
@@ -30,8 +43,8 @@
   }
 
 
-  @media screen and (min-width: 883px) {
-    display: none;
+  @media screen and (max-width: $tablet) {
+    display: block;
   }
 
 }

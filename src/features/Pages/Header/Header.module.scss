@@ -1,6 +1,7 @@
 @import "../../../common/Styles/SASS/variables";
 @import "../../../common/Styles/SASS/mixins";
 @import "../../../common/Styles/SASS/corners";
+@import "../../../common/Styles/SASS/devices";
 
 .wrapper {
   width: 100%;
@@ -15,9 +16,7 @@
 
     .box {
       box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenter();
       width: 316px;
       height: 100px;
       position: relative;
@@ -38,10 +37,29 @@
         margin-left: 10px;
         margin-bottom: 10px;
       }
-
     }
   }
 }
 
+
+@media (max-width: $tablet) {
+  .wrapper {
+    height: 60px;
+    border: 0;
+
+    .header {
+      .box {
+        width: 35%;
+        left: -9px;
+        top:1px;
+        border: 0;
+        img {
+          margin-left: 20px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
 
 

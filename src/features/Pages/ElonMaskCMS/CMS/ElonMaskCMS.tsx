@@ -14,7 +14,6 @@ export const ElonMaskCms = () => {
     const data = useAppSelector(state => state.cms)
     const isLogged = useSelector((state: AppRootStateType) => state.auth.isLogged)
 
-
     const [marketPosition, setMarketPosition] = useState(data.marketPosition)
     const [guaranty, setGuaranty] = useState(data.guaranty)
     const [year, setYear] = useState(data.year)
@@ -36,7 +35,6 @@ export const ElonMaskCms = () => {
     const updateData = () => {
         const newData: CmsDataType = {marketPosition, guaranty, travellingDuration, year}
         dispatch(setCmsData(newData))
-        console.log(newData)
     };
 
     const logOut = () => {
@@ -45,46 +43,53 @@ export const ElonMaskCms = () => {
 
     return (
         <section className={style.cms}>
-            <Container fixed>
+
                 <Paper style={{padding: '10px'}}>
-
-
+                    <Container fixed>
                     <Stack
                         direction="row"
                         justifyContent={'center'}
                         alignItems={'center'}
                         spacing={2}
-                        style={{marginBottom:'25px'}}
+                        style={{marginBottom: '25px'}}
                     >
                         <h2>Elon Mask CMS</h2>
                         {isLogged && <IconButton onClick={logOut}><LogoutIcon/></IconButton>}
                     </Stack>
 
-
                     {isLogged
                         ?
-                        <Grid container justifyContent={'center'} spacing={2}>
+                        <Grid container
+                              justifyContent={'center'}
+                              spacing={3}
+                              >
+
                             <Grid container
                                   spacing={3}
                                   justifyContent={'center'}
-                            >
 
-                                <Grid item>
+                            >
+                                <Grid item xs={6}>
+
                                     <TextField id="outlined-basic"
                                                label="Мы на рынке"
                                                variant="outlined"
                                                type="number"
                                                defaultValue="Мы"
+                                               fullWidth
                                                value={marketPosition}
+                                               size="small"
                                                onChange={marketPositionHandler}
                                     />
-                                </Grid>
 
-                                <Grid item>
+                                </Grid>
+                                <Grid item xs={6}>
                                     <TextField id="outlined-basic"
                                                label="Гарантии безопасности"
                                                variant="outlined"
                                                type="number"
+                                               size="small"
+                                               fullWidth
                                                InputProps={{
                                                    endAdornment: <InputAdornment position="end">%</InputAdornment>,
                                                }}
@@ -92,12 +97,15 @@ export const ElonMaskCms = () => {
                                                onChange={guarantyHandler}
                                     />
                                 </Grid>
-                                <Grid item>
+                                <Grid item xs={6}>
                                     <TextField id="outlined-basic"
                                                label="За какой год дарим календарик"
                                                variant="outlined"
                                                type="number"
+
                                                defaultValue="2001"
+                                               size="small"
+                                               fullWidth
                                                InputProps={{
                                                    startAdornment: <InputAdornment position="start">за</InputAdornment>,
                                                    endAdornment: <InputAdornment position="end">год</InputAdornment>,
@@ -105,11 +113,13 @@ export const ElonMaskCms = () => {
                                                value={year} onChange={yearHandler}
                                     />
                                 </Grid>
-                                <Grid item>
+                                <Grid item  xs={6}>
                                     <TextField id="outlined-basic"
                                                label="Длительность полета"
                                                variant="outlined"
                                                type="text"
+                                               size="small"
+                                               fullWidth
                                                InputProps={{
                                                    endAdornment: <InputAdornment position="end">дней</InputAdornment>,
                                                }}
@@ -128,9 +138,9 @@ export const ElonMaskCms = () => {
 
                         : <Login/>
                     }
-                </Paper>
+
             </Container>
+                </Paper>
         </section>
-    )
-        ;
+    );
 };

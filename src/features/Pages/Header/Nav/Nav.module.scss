@@ -1,15 +1,15 @@
 @import "../../../../common/Styles/SASS/variables";
+@import "../../../../common/Styles/SASS/devices";
 @import "../../../../common/Styles/SASS/mixins";
 
 .nav {
- width: 58%;
+  width: 58%;
   @include flexCenter(space-between);
 
   .link {
     position: relative;
     @include fontParams(16px, 22px, 300, $primaryTextColor);
     margin-right: 9px;
-
 
     &::after {
       content: '';
@@ -26,25 +26,27 @@
       cursor: pointer;
       color: $secondaryTextColor;
       opacity: 0.9;
+
       &:after {
         width: 100%;
       }
     }
 
-    &:nth-child(5){
+    &:nth-child(5) {
       margin-right: 2px;
     }
-    &:nth-child(6){
+
+    &:nth-child(6) {
       margin-right: 14px;
     }
 
   }
 
-  @media screen and (max-width: 768px) {
-
+  @media screen and (max-width: $tablet) {
+    display: none;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobileL) {
 
   }
 

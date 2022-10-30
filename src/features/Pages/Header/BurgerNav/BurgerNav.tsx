@@ -28,7 +28,7 @@ export const BurgerNav: React.FC<PropsType> = ({sections}) => {
                 <Hamburger
                     toggled={menuIsOpen}
                     toggle={setMenuIsOpen}
-                    color="#d35718"
+                    color="#ffffff"
                     distance={'lg'}
                 />
             </div>

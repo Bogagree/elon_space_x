@@ -1,6 +1,7 @@
 @import "../../../common/Styles/SASS/mixins";
 @import "../../../common/Styles/SASS/variables";
 @import "../../../common/Styles/SASS/corners";
+@import "../../../common/Styles/SASS/devices";
 
 .main {
   min-width: 1920px;
@@ -36,11 +37,39 @@
           top: 58px;
         }
       }
-
       button {
         margin-top: 113px;
       }
-
     }
   }
+}
+
+@media (max-width: $tablet) {
+  .main {
+    min-width: 768px;
+    min-height: 432px;
+    background-position: top;
+    background-size: 170%;
+    .container {
+      padding-left: 20px;
+      .textBlock {
+        height: 280px;
+        padding-top: 100px;
+        h1 {
+          @include fontParams(38px, 1, 700, $primaryTextColor);
+          .subtitle{
+            @include fontParams(18px, 1, 300, $primaryTextColor);
+            top: 38px;
+          }
+        }
+        button {
+          margin: 100px 0 0 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobileL) {
+  min-width: 425px;
 }

@@ -9,8 +9,11 @@ Wish me good luck!
 
 ## Hint for Elon
 > **login**: elon@roskosmos.gov
-
+> 
 > **password**: Polkovnik_Mask
+
+## Prototype image
+![app example](src/assets/img/app_prototype.jpg)
 
 ## Stack
 
@@ -22,9 +25,6 @@ Wish me good luck!
 - 7 in 1 folder pattern
 - hamburger-react
 
-## Prototype image
-
-![app example](src/assets/img/app_prototype.jpg)
 
 ## Commits guideline
 

@@ -1,5 +1,6 @@
 @import "../../Styles/SASS/variables";
 @import "../../Styles/SASS/mixins";
+@import "../../Styles/SASS/devices";
 
 .advantageBlock {
   width: 185px;
@@ -19,7 +20,7 @@
   }
 
   .upText {
-    @include fontParams(16px, 2, 100, $secondaryTextColor);
+    @include fontParams(16px, 2, 300, $secondaryTextColor);
     opacity: 0.65;
   }
 
@@ -29,17 +30,17 @@
     opacity: 1;
 
     .middleTextYear {
-      @include fontParams(18px, 2.25, 700, $primaryTextColor, "Museo sans cyrl");
+      @include fontParams(18px, 2.25, 700, $primaryTextColor);
     }
   }
 
   .middleText {
-    @include fontParams(60px, 1.17, 700, $primaryTextColor, "Museo sans cyrl");
+    @include fontParams(60px, 1.17, 700, $primaryTextColor);
   }
 
 
   .downText {
-    @include fontParams(18px, 0.75, 100, $secondaryTextColor);
+    @include fontParams(18px, 0.75, 300, $secondaryTextColor);
     opacity: 0.65;
   }
 
@@ -48,4 +49,39 @@
     box-shadow: 1px 1px 2px $secondaryTextColor;
   }
 
+}
+
+@media (max-width: $tablet) {
+  .advantageBlock {
+    width: 145px;
+    height: 145px;
+    padding: 5px;
+
+    .upText {
+      @include fontParams(18px, 2, 300, $primaryColor);
+      font-weight: bold;
+      opacity: 0.65;
+    }
+
+    .year {
+      display: flex;
+      align-items: flex-end;
+      opacity: 1;
+
+      .middleTextYear {
+        @include fontParams(18px, 2, 700, $primaryTextColor);
+
+      }
+    }
+
+    .middleText {
+      @include fontParams(45px, 1.17, 700, $primaryTextColor);
+    }
+
+
+    .downText {
+      @include fontParams(18px, 0.75, 300, $primaryTextColor);
+      opacity: 0.65;
+    }
+  }
 }
