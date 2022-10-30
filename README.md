@@ -7,12 +7,18 @@ I gonna do my best, and I'll JUST DO IT!
 
 Wish me good luck!
 
+## Hint for Elon
+> **login**: elon@roskosmos.gov
+
+> **password**: Polkovnik_Mask
+
 ## Stack
 
 - React CRA TS
 - redux
 - SASS
 - Jest
+- Formik
 - 7 in 1 folder pattern
 - hamburger-react
 
