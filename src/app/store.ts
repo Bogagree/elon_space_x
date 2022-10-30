@@ -1,6 +1,7 @@
 import {applyMiddleware, combineReducers, compose, legacy_createStore as createStore} from 'redux';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 import {cmsReducer} from '../features/Pages/ElonMaskCMS/cms-reducer';
+import {authReducer} from '../features/Auth/auth-reducer';
 
 declare global {
     interface Window {
@@ -10,7 +11,8 @@ declare global {
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    cms: cmsReducer
+    cms: cmsReducer,
+    auth: authReducer
 })
 
 export const store = createStore(rootReducer, composeEnhancers(applyMiddleware()))
