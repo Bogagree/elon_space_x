@@ -1,12 +1,18 @@
 import React, {ChangeEvent, useState} from 'react';
 import style from './ElonMaskCMS.module.scss'
-import {useAppDispatch, useAppSelector} from '../../../app/store';
+import {AppRootStateType, useAppDispatch, useAppSelector} from '../../../app/store';
 import {CmsDataType, setCmsData} from './cms-reducer';
+import {Login} from '../../Auth/Login/Login';
+import {useSelector} from 'react-redux';
+import {Button, Grid, Icon, TextField} from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export const ElonMaskCms = () => {
 
     const dispatch = useAppDispatch()
     const data = useAppSelector(state => state.cms)
+    const isLogged = useSelector((state: AppRootStateType) => state.auth.isLogged)
+
 
     const [marketPosition, setMarketPosition] = useState(data.marketPosition)
     const [guaranty, setGuaranty] = useState(data.guaranty)
@@ -34,23 +40,64 @@ export const ElonMaskCms = () => {
 
     return (
         <section className={style.cms}>
+            <Grid container justifyContent={'center'}>
+                <Grid item justifyContent={'center'}>
+                    <h2>Elon Mask CMS</h2>
+                </Grid>
 
-            <div className={style.container}>
-                <input type="text" placeholder="Мы" value={marketPosition} onChange={marketPositionHandler}/>
-                <input type="text" placeholder="Гарантируем" value={guaranty} onChange={guarantyHandler}/>
-                <input type="text" placeholder="Подарок" value={year} onChange={yearHandler}/>
-                <input type="text" placeholder="Путешествие" value={travellingDuration}
-                       onChange={travellingDurationHandler}/>
+                {isLogged
+                    ?
+                    <Grid container justifyContent={'center'}>
+                        <Grid item justifyContent={'center'}>
 
-                <div style={{color: 'white', margin: '10px'}}>{marketPosition}</div>
-                <div style={{color: 'white', margin: '10px'}}>{guaranty}</div>
-                <div style={{color: 'white', margin: '10px'}}>{year}</div>
-                <div style={{color: 'white', margin: '10px'}}>{travellingDuration}</div>
+                            {/*<div className={style.container}>*/}
 
-                <button onClick={updateData}>update data</button>
+                            <TextField id="outlined-basic"
+                                       label="Market position"
+                                       variant="outlined"
+                                       type="text"
+                                       defaultValue="Мы"
+                                       value={marketPosition}
+                                       onChange={marketPositionHandler}
+                            />
 
-            </div>
+                            <TextField id="outlined-basic"
+                                       label="Гарантии безопасности"
+                                       variant="outlined"
+                                       type="text"
+                                       defaultValue="Мы"
+                                       value={guaranty}
+                                       onChange={guarantyHandler}
+                            />
+                            <TextField id="outlined-basic"
+                                       label="За какой год дарим календарик"
+                                       variant="outlined"
+                                       type="text"
+                                       defaultValue="Мы"
+                                       value={year} onChange={yearHandler}
+                            />
 
+                            <TextField id="outlined-basic"
+                                       label="Длительность полета"
+                                       variant="outlined"
+                                       type="text"
+                                       value={travellingDuration}
+                                       onChange={travellingDurationHandler}
+                            />
+
+                            <Grid container justifyContent={'center'}>
+                                <Grid item justifyContent={'center'}>
+                                    <Button variant="outlined" onClick={updateData}>update data</Button>
+                                </Grid>
+                            </Grid>
+
+                            {/*</div>*/}
+                        </Grid>
+                    </Grid>
+                    : <Login/>
+                }
+
+            </Grid>
         </section>
     );
 };
