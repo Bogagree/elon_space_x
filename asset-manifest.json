@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/elon_space_x/static/css/main.b60f13fd.css",
-    "main.js": "/elon_space_x/static/js/main.b2e363c5.js",
+    "main.css": "/elon_space_x/static/css/main.5d773538.css",
+    "main.js": "/elon_space_x/static/js/main.30dfb1c5.js",
     "static/js/787.b28371a8.chunk.js": "/elon_space_x/static/js/787.b28371a8.chunk.js",
     "static/media/fon_10.png": "/elon_space_x/static/media/fon_10.ddb101755051990ab611.png",
     "static/media/museosanscyrl_100.otf": "/elon_space_x/static/media/museosanscyrl_100.ca2ff6f4372939e9c7bc.otf",
     "static/media/museosanscyrl_300.ttf": "/elon_space_x/static/media/museosanscyrl_300.b89d2aed072b957f2e03.ttf",
     "static/media/museosanscyrl_700.ttf": "/elon_space_x/static/media/museosanscyrl_700.4e63f06b4aa58983885e.ttf",
     "index.html": "/elon_space_x/index.html",
-    "main.b60f13fd.css.map": "/elon_space_x/static/css/main.b60f13fd.css.map",
-    "main.b2e363c5.js.map": "/elon_space_x/static/js/main.b2e363c5.js.map",
+    "main.5d773538.css.map": "/elon_space_x/static/css/main.5d773538.css.map",
+    "main.30dfb1c5.js.map": "/elon_space_x/static/js/main.30dfb1c5.js.map",
     "787.b28371a8.chunk.js.map": "/elon_space_x/static/js/787.b28371a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b60f13fd.css",
-    "static/js/main.b2e363c5.js"
+    "static/css/main.5d773538.css",
+    "static/js/main.30dfb1c5.js"
   ]
 }
