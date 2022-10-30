@@ -1,6 +1,6 @@
 const cmsInitialState = {
     marketPosition: '1',
-    guaranty: '50%',
+    guaranty: '50',
     year: '2001',
     travellingDuration: '567'
 

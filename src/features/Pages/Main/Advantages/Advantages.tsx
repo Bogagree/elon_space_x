@@ -11,7 +11,7 @@ export const Advantages: React.FC<CmsDataType> = (props) => {
     return (
         <div className={style.advantages}>
             <AdvantageBlock upText={'мы'} middleText={props.marketPosition} downText={'на рынке'} />
-            <AdvantageBlock upText={'гарантируем'} middleText={props.guaranty} downText={'безопасность'} />
+            <AdvantageBlock upText={'гарантируем'} middleText={props.guaranty + '%'} downText={'безопасность'} />
             <AdvantageBlock upText={'календарик за '} middleText={props.year} downText={'в подарок'} year={'г.'}/>
             <AdvantageBlock upText={'путешествие'} middleText={props.travellingDuration} downText={'дней'} />
         </div>
