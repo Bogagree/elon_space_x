@@ -10,7 +10,7 @@
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-
+  left: 10px;
 
   .container {
     @include container();
@@ -51,6 +51,7 @@
     min-height: 425px;
     background-position: top;
     background-size: 160%;
+    left: 0;
 
     .container {
       padding-left: 20px;
@@ -89,7 +90,7 @@
       right: 0;
       bottom: 0;
       z-index: -1;
-      left: -603px;
+      left: -555px;
       width: 125vh;
       background: url("../../../assets/img/fon_10.png") no-repeat;
       transform: rotate(90deg);
