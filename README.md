@@ -7,13 +7,24 @@ I gonna do my best, and I'll JUST DO IT!
 
 Wish me good luck!
 
-## Hint for Elon
+## Hint for Elon Mask
 > **login**: elon@roskosmos.gov
 > 
 > **password**: Polkovnik_Mask
 
 ## Prototype image
+Adoptive layouts:
+>desktop width: 1920px 
 ![app example](src/assets/img/app_prototype.jpg)
+
+> >**tablet: width - 768px**
+![app example](src/assets/img/app_prototype_w768px.jpg)
+
+>**tablet with cms-login: width - 768px**
+![app example](src/assets/img/app_prototype_cms_w768px.jpg)
+
+>**Mobile: width - 425px**
+![app example](src/assets/img/app_prototype_w425px.jpg)
 
 ## Stack
 
@@ -29,7 +40,6 @@ Wish me good luck!
 ## Commits guideline
 
 **type**: description
-
 **feat** - implemented new functionality from the terms of reference (added zoom support, added a footer, added a product card).
 **fix** - bug fixing
 **style** - CSS and
@@ -44,10 +54,3 @@ feat: add Header
 
 ## Adoptive prototypes image
 
->**tablet: width - 768px**
-
-![app example](src/assets/img/app_prototype_w768px.jpg)
-
->**tablet with cms-login: width - 768px**
-> 
-![app example](src/assets/img/app_prototype_cms_w768px.jpg)
