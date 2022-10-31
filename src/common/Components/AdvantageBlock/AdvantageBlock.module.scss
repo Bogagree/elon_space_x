@@ -85,3 +85,19 @@
     }
   }
 }
+
+@media (max-width: $mobileL) {
+  .advantageBlock {
+    width: 160px;
+    height: 160px;
+    .year {
+      .middleTextYear {
+        line-height: 1.9;
+      }
+
+    }
+  }
+
+
+
+}

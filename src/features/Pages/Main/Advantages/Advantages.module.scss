@@ -17,5 +17,10 @@
     height: 300px;
     margin-right: 25px;
   }
+  @media (max-width: $mobileL) {
+    width: 330px;
+    height: 330px;
+    margin-right: 0;
+  }
 }
 

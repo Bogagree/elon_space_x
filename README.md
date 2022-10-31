@@ -41,3 +41,13 @@ Wish me good luck!
 test: create unit test for profile reducer
 
 feat: add Header
+
+## Adoptive prototypes image
+
+>**tablet: width - 768px**
+
+![app example](src/assets/img/app_prototype_w768px.jpg)
+
+>**tablet with cms-login: width - 768px**
+> 
+![app example](src/assets/img/app_prototype_cms_w768px.jpg)

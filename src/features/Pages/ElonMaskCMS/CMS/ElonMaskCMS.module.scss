@@ -1,7 +1,7 @@
 @import "../../../../common/Styles/SASS/mixins";
+@import "../../../../common/Styles/SASS/devices";
 
 .cms {
-  padding-top: 20px;
   width: 100%;
   height: 50vh;
 
@@ -9,4 +9,8 @@
     @include container();
   }
 
+  @media (max-width: $mobileL) {
+    .cms{
+    }
+  }
 }

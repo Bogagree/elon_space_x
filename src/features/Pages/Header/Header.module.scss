@@ -41,7 +41,6 @@
   }
 }
 
-
 @media (max-width: $tablet) {
   .wrapper {
     height: 60px;
@@ -50,12 +49,26 @@
     .header {
       .box {
         width: 35%;
-        left: -9px;
-        top:1px;
+        left: -8px;
+        top:2px;
         border: 0;
         img {
           margin-left: 20px;
           width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobileL) {
+  .wrapper {
+    .header {
+      .box {
+        width: 100%;
+        left: 2px;
+        top:2px;
+        img {
         }
       }
     }

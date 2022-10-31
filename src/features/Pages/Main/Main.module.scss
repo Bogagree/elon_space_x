@@ -4,21 +4,21 @@
 @import "../../../common/Styles/SASS/devices";
 
 .main {
-  min-width: 1920px;
   min-height: 660px;
   background-image: url("../../../assets/img/fon_10.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   position: relative;
+
 
   .container {
     @include container();
     @include flexCenter(space-between);
-    padding-left: 25px;
+    padding-left: 20px;
 
     .textBlock {
-      height: 380px;
+      height: 360px;
       padding-top: 100px;
 
       h1 {
@@ -37,6 +37,7 @@
           top: 58px;
         }
       }
+
       button {
         margin-top: 113px;
       }
@@ -47,21 +48,26 @@
 @media (max-width: $tablet) {
   .main {
     min-width: 768px;
-    min-height: 432px;
+    min-height: 425px;
     background-position: top;
-    background-size: 170%;
+    background-size: 160%;
+
     .container {
       padding-left: 20px;
+
       .textBlock {
-        height: 280px;
+        height: 260px;
         padding-top: 100px;
+
         h1 {
           @include fontParams(38px, 1, 700, $primaryTextColor);
-          .subtitle{
-            @include fontParams(18px, 1, 300, $primaryTextColor);
+
+          .subtitle {
+            @include fontParams(22px, 1, 300, $primaryTextColor);
             top: 38px;
           }
         }
+
         button {
           margin: 100px 0 0 100px;
         }
@@ -71,5 +77,40 @@
 }
 
 @media (max-width: $mobileL) {
-  min-width: 425px;
+  .main {
+    min-width: 425px;
+    min-height: 98vh;
+    background-image: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      left: -603px;
+      width: 125vh;
+      background: url("../../../assets/img/fon_10.png") no-repeat;
+      transform: rotate(90deg);
+    }
+
+    .container {
+      @include flexCenter(space-around, column-reverse);
+      padding: 80px 0 0 0;
+
+      .textBlock {
+        padding-top: 50px;
+        h1{
+          font-size: 45px;
+          .subtitle{
+            top: 50px;
+        }
+        }
+        button {
+          margin-left: 150px;
+        }
+      }
+    }
+  }
 }

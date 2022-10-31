@@ -2,13 +2,14 @@
 @import "../../Styles/SASS/mixins";
 
 .default {
-  @include fontParams(14px, 1.2, 100, $secondaryTextColor, "Museo sans cyrl");
+  @include fontParams(14px, 1.2, 300, $secondaryTextColor, "Museo sans cyrl");
   @include flexCenter();
   position: relative;
   min-height: 35px;
   min-width: 180px;
   background: rgb(0, 0, 0);
   padding: 0;
+  margin-left: 5px;
   border-style: solid;
   border-width: 2px;
   border-image-source: linear-gradient(189.0deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
